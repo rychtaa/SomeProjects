@@ -1,5 +1,11 @@
-""" Create dictionaries for each city 
-with monthly rainfall data for 2022 """
+""" This is my first project
+    it displays monthly, quarterly and yearly
+    amount of rainfall from 2022 in 5 biggest cities
+    in North brabant in Netherland
+"""
+
+# Create dictionaries for each city 
+# with monthly rainfall data for 2022
 rainfallData = {
     "Eindhoven": {
         "January": 65,
