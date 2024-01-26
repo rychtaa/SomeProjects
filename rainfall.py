@@ -1,5 +1,11 @@
-""" Create dictionaries for each city 
-with monthly rainfall data for 2022 """
+""" This is my first project
+    it displays monthly, quarterly and yearly
+    amount of rainfall from 2022 in 5 biggest cities
+    in North brabant in Netherland
+"""
+
+# Create dictionaries for each city 
+# with monthly rainfall data for 2022
 rainfallData = {
     "Eindhoven": {
         "January": 65,
@@ -73,8 +79,9 @@ rainfallData = {
     }
 }
 
-# Create a dictionary to store quarterly rainfall for each city
+# Create a dictionary to store quarterly and yearly rainfall for each city
 quarterlyRainfall = {}
+yearlyRainfall = {}
 
 # Loop through each city in the rainfallData dictionary
 
@@ -87,7 +94,7 @@ for city, monthlyData in rainfallData.items():
 
     # Loop through the months in the monthlyData dictionary
     for month , rainfall in monthlyData.items():
-        if month in ["Januaray", "February", "March"]:
+        if month in ["January", "February", "March"]:
             q1Total += rainfall
         elif month in ["April", "May", "June"]:
             q2Total += rainfall
@@ -104,13 +111,18 @@ for city, monthlyData in rainfallData.items():
         "Q4": q4Total
     }
 
+# Create a list of all city names for user reference
+cityList = list(rainfallData.keys())
+
 # Users input
 while True:
-    # Ask user to input a city or 'q' to quit
-    userInput = input("\nEnter a city name from Nord Brabant or 'q' to quit: ")
     
-    # print("Choose from: Eindhoven, Tilburg, Breda, Den Bosch, Helmond")
+    # Display list of all city names for user to choose from
+    print("\nChoose from " + ", ".join(cityList))
 
+    # Ask user to input a city or 'q' to quit
+    userInput = input("Enter a city name or 'q' to quit: ")
+    
     # Check if the user wants to quit
     if userInput.lower() == "q":
         print("Goodbye!")
@@ -135,11 +147,10 @@ while True:
         for quarter, rainfall in quarterlyRainfall[userInput].items():
             print(f"{quarter}: {rainfall} mm")
 
-        """   # Calculate and display yearly rainfall !!!!----> HAVE A LOOK IN rainfallnotes.txt
-        yearlyRainfall = sum(monthlyData.values())
-        print(f"\nYearly rainfall in {userInput} in 2022 was {yearlyRainfall} mm")
-        """
-
+        # Calculate and display yearly rainfall
+        yearlyTotal = sum(rainfallData[userInput].values())
+        print(f"\nYearly rainfall in {userInput} in 2022 was {yearlyTotal} mm")
+        
     else:
         print("\nInvalid city. Please enter city from Nord Brabant or 'q' to quit")
-        
+
