@@ -1,3 +1,5 @@
+# This version is broken. Fixes are coming
+
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -30,10 +32,11 @@ else:
     print("You fall into a hole. GAME OVER! 😒")
 
 choice2 = input("You got to a river. Do you want to swim across or wait for a boat? Type \"swim\" or \"wait\"\n").lower()
-if choice2 == "swim":
-    print("You were attacked by trout. GAME OVER! 😒")
-else:
+if choice2 == "wait":
     pass
+else:
+    print("You were attacked by trout. GAME OVER! 😒")
+
 choice3 = input("You came to a wall with 3 door. Which door do you choose? Type \"red\" or \"yellow\" or \"green\"\n").lower()
 if choice3 == "red":
     print("You were burned by fire. GAME OVER! 😒")
