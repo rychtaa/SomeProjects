@@ -1,9 +1,9 @@
 # BMI calculator
 print("*"*5 + " BMI calculator " + "*"*5)
 # Height set to right data type
-height = float(input("What is your height?\n"))
+height = float(input("What is your height? (ex. 1.65)\n"))
 # Weight set to right data type
-weight = int(input("What is your weight?\n"))
+weight = int(input("What is your weight? (ex. 60)\n"))
 # Calculations
 bmi = weight / height ** 2
 print(f"Your BMI: {bmi:.2f}")
