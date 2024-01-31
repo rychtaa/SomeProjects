@@ -25,10 +25,8 @@ print("Your mission is to find the treasure.")
 
 choice1 = input("You are at a cross road. Where do you want to go? Type \"left\" or \"right\"\n").lower()
 if choice1 == "left":
-    pass
     choice2 = input("You got to a river. Do you want to swim across or wait for a boat? Type \"swim\" or \"wait\"\n").lower()
     if choice2 == "wait":
-        pass
         choice3 = input("You came to a wall with 3 door. Which door do you choose? Type \"red\" or \"yellow\" or \"green\"\n").lower()
         if choice3 == "red":
             print("You were burned by fire. GAME OVER! 😒")
