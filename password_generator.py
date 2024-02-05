@@ -12,4 +12,5 @@ all_symbols = letters + numbers + symbols
 length = nr_letters + nr_symbols + nr_numbers
 
 password = "".join(random.sample(all_symbols, length))
-print(password)
+#print(password)
+print(f"Your password is: \"{password}\" it is {len(password)} characters long.")
