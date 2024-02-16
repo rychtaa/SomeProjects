@@ -34,6 +34,9 @@ def caesar(start_text, shift_amount, cipher_direction):
 should_continue = True
 while should_continue:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    if direction not in ("encode", "decode"):
+        print("Wrong answer, try again.")
+        continue
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
     shift = shift % 26
@@ -41,7 +44,8 @@ while should_continue:
 
     restart = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
     if restart == "no":
-         should_continue = False
-         print("Goodbye!")
+        should_continue = False
+        print("Goodbye!")
     else:
         print("Wrong answer, try again.")
+        
